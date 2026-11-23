@@ -36,7 +36,7 @@ export const site = {
 
   social: {
     // PENDIENTE: URL de tu página empresarial de Facebook, p. ej. "https://www.facebook.com/tu-pagina"
-    facebook: "",
+    facebook: "https://www.facebook.com/Flympuxlab/",
     // PENDIENTE: URL de tu perfil empresarial de Instagram, p. ej. "https://www.instagram.com/tu-usuario"
     instagram: "",
   },
