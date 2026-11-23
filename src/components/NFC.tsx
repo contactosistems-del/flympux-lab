@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { Reveal, SectionHeader, trackSpot, Button } from "./ui";
 import { waLink } from "@/lib/site";
@@ -74,6 +75,79 @@ const steps = [
   { t: "La programo y te la entrego", d: "Lista para usar. Si cambias de link, la reprogramo." },
 ];
 
+// Fotos libres de Unsplash (Unsplash License: uso comercial gratis, sin atribución obligatoria).
+const u = (id: string, w = 1000) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=70`;
+
+type Showcase = {
+  biz: string;
+  photo: string;
+  alt: string;
+  desc: string;
+  plate: { name: string; top: string; cta: string; bg: string; fg: string; accent: string; font: string };
+};
+
+const showcase: Showcase[] = [
+  {
+    biz: "Restaurante y taquería",
+    photo: u("photo-1668724775562-f5bf6284ee12"),
+    alt: "Plato de tacos en un restaurante",
+    desc: "En cada mesa: el cliente ve el menú completo y te deja reseña antes de irse.",
+    plate: { name: "TAQUERÍA", top: "La Esquina", cta: "VER MENÚ", bg: "linear-gradient(160deg,#fff4dc,#f5dfb0)", fg: "#7a1a0c", accent: "#c2410c", font: "font-display" },
+  },
+  {
+    biz: "Barbería",
+    photo: u("photo-1702865272115-5afdbae975af"),
+    alt: "Barbería con silla de barbero y espejo",
+    desc: "En el espejo o la caja: te siguen en redes y agendan su próximo corte por WhatsApp.",
+    plate: { name: "BARBER SHOP", top: "Cortes & estilo", cta: "SÍGUENOS", bg: "linear-gradient(160deg,#1c1a17,#0b0a09)", fg: "#e8c77a", accent: "#e8c77a", font: "font-display" },
+  },
+  {
+    biz: "Estética y uñas",
+    photo: u("photo-1633681926035-ec1ac984418a"),
+    alt: "Interior de una estética con sillas y espejos",
+    desc: "En recepción: catálogo de servicios, precios y botón para apartar cita.",
+    plate: { name: "BEAUTY STUDIO", top: "Uñas · Cabello · Pestañas", cta: "AGENDA TU CITA", bg: "linear-gradient(160deg,#fff,#fbe3ec)", fg: "#9d174d", accent: "#db2777", font: "font-display" },
+  },
+];
+
+function Plate({ p }: { p: Showcase["plate"] }) {
+  return (
+    <div className="relative">
+      <div className="flex h-[188px] w-[132px] flex-col items-center justify-between rounded-2xl p-3 text-center shadow-[0_24px_40px_-12px_rgb(0_0_0/.85)]" style={{ background: p.bg, color: p.fg }}>
+        <span className="text-[8px] font-semibold uppercase tracking-[0.18em] opacity-75">{p.top}</span>
+        <span className={`${p.font} text-[15px] font-bold leading-tight`}>{p.name}</span>
+        <span className="rounded-md px-2 py-1 text-[10px] font-extrabold tracking-wide" style={{ background: p.accent, color: p.bg.includes("#1c1a17") ? "#0b0a09" : "#fff" }}>{p.cta}</span>
+        <span style={{ color: p.accent }}><Waves /></span>
+        <span className="text-[7px] font-semibold opacity-70">Acerca tu celular</span>
+      </div>
+      {/* base de acrílico */}
+      <div className="mx-auto -mt-1 h-3 w-[150px] -translate-x-[9px] rounded-sm bg-white/35 backdrop-blur-sm" />
+    </div>
+  );
+}
+
+function ShowcaseCard({ s }: { s: Showcase }) {
+  return (
+    <article className="group relative h-[420px] overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(160deg,#1a1a1a,#060606)]">
+      <img
+        src={s.photo}
+        alt={s.alt}
+        loading="lazy"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+        className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/5" />
+      <div className="absolute right-5 top-6 rotate-[4deg] transition duration-500 group-hover:-translate-y-1 group-hover:rotate-0">
+        <Plate p={s.plate} />
+      </div>
+      <div className="absolute inset-x-0 bottom-0 p-6">
+        <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">{s.biz}</span>
+        <p className="mt-3 max-w-[30ch] text-[15px] leading-relaxed text-white/90">{s.desc}</p>
+      </div>
+    </article>
+  );
+}
+
 const Waves = () => (
   <svg width="40" height="28" viewBox="0 0 40 28" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden>
     <path d="M8 6a12 12 0 0 0 0 16M14 9a7 7 0 0 0 0 10M26 9a7 7 0 0 1 0 10M32 6a12 12 0 0 1 0 16" />
@@ -94,8 +168,18 @@ export function NFC() {
           text="Tu cliente acerca su celular a la tarjeta y se abre lo que tú quieras. Sin apps y sin escanear nada. Toca una opción para ver cómo funciona."
         />
 
+        {/* Así se ve en tu negocio */}
+        <div className="mt-14 grid gap-5 md:grid-cols-3">
+          {showcase.map((s) => (
+            <Reveal key={s.biz}>
+              <ShowcaseCard s={s} />
+            </Reveal>
+          ))}
+        </div>
+        <p className="mt-4 text-center text-sm text-white/50">Diseño personalizado con tu logo y los colores de tu negocio.</p>
+
         {/* Demo interactivo */}
-        <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
+        <div className="mt-20 grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
           <Reveal>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3" role="tablist" aria-label="¿Qué abre tu tarjeta?">
               {uses.map((u) => {
@@ -199,7 +283,9 @@ export function NFC() {
             </div>
           </Reveal>
           <Reveal>
-            <div onMouseMove={trackSpot} className="spot ring-gradient flex h-full flex-col justify-between gap-6 rounded-3xl bg-white/[0.03] p-7 sm:p-8">
+            <div onMouseMove={trackSpot} className="spot ring-gradient relative isolate flex h-full flex-col justify-between gap-6 overflow-hidden rounded-3xl bg-white/[0.03] p-7 sm:p-8">
+              <img src={u("photo-1760486728029-d22f92988dc5", 1200)} alt="" aria-hidden loading="lazy" onError={(e) => (e.currentTarget.style.display = "none")} className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35" />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/40" />
               <div>
                 <p className="text-sm font-semibold text-electric">¿No tienes página ni menú digital?</p>
                 <h3 className="mt-2 font-display text-3xl font-semibold leading-tight tracking-tight text-white">Yo te lo creo. Todo interactivo, nada de información estática.</h3>
