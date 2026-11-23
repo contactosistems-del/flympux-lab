@@ -38,17 +38,16 @@ export function HeroLogo() {
       {/* Anillos orbitales */}
       <div className="absolute inset-[4%] rounded-full border border-white/[0.07]" />
       <div className="absolute inset-[4%] rounded-full bg-[conic-gradient(from_0deg,transparent_0deg,#c8ff9e_40deg,#7cff3d_90deg,transparent_160deg)] opacity-70 animate-spin-slow [mask:radial-gradient(circle,transparent_69.3%,#000_69.6%,#000_70.6%,transparent_71%)]" />
-      <div className="absolute inset-[13%] rounded-full border border-dashed border-white/10 animate-spin-rev" />
-      <div className="absolute inset-[22%] rounded-full border border-electric/15" />
+      <div className="absolute inset-0 rounded-full border border-dashed border-white/10 animate-spin-rev" />
 
       {/* Partículas en órbita */}
       <div className="absolute inset-[4%] animate-spin-orbit">
         <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-electric shadow-[0_0_18px_4px_rgb(124_255_61/.8)]" />
       </div>
-      <div className="absolute inset-[13%] animate-spin-orbit-rev">
+      <div className="absolute inset-0 animate-spin-orbit-rev">
         <span className="absolute bottom-0 left-1/2 h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full bg-white shadow-[0_0_14px_3px_rgb(255_255_255/.7)]" />
       </div>
-      <div className="absolute inset-[22%] animate-spin-orbit [animation-duration:14s]">
+      <div className="absolute inset-[2%] animate-spin-orbit [animation-duration:14s]">
         <span className="absolute left-0 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-electric/80 shadow-[0_0_12px_3px_rgb(124_255_61/.6)]" />
       </div>
 
@@ -56,13 +55,13 @@ export function HeroLogo() {
       <div className="absolute inset-0 grid place-items-center animate-floaty">
         <div
           ref={stage}
-          className="relative w-[74%] transition-transform duration-300 ease-out [transform-style:preserve-3d] [transform:rotateX(var(--rx,0deg))_rotateY(var(--ry,0deg))]"
+          className="relative w-[80%] transition-transform duration-300 ease-out [transform-style:preserve-3d] [transform:rotateX(var(--rx,0deg))_rotateY(var(--ry,0deg))]"
         >
           <img
             src="/img/flx-logo-hero.webp"
             alt="Flympux LAB"
-            width={770}
-            height={430}
+            width={1000}
+            height={1000}
             className="relative w-full drop-shadow-[0_0_40px_rgb(124_255_61/.25)]"
           />
           {/* Destello metálico recortado a la forma del logo */}
