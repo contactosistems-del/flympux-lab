@@ -27,8 +27,8 @@ export const site = {
   // PENDIENTE: correo de contacto (opcional). Vacío = no se muestra.
   email: "",
 
-  location: "Cuautitlán, Estado de México",
-  coverage: "Atención en todo México",
+  location: "Servicio en todo México",
+  coverage: "Cobertura nacional",
 
   // PENDIENTE (opcional): endpoint de Formspree / Web3Forms para recibir el formulario por correo.
   // Si queda vacío, el formulario arma el mensaje y lo envía por WhatsApp.

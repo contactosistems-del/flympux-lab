@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords: [
     "desarrollo de software a medida", "páginas web empresariales", "tiendas en línea",
     "sistemas administrativos", "automatización de procesos", "aplicaciones web",
-    "soporte técnico", "agencia de software México", "Cuautitlán", "Estado de México",
+    "soporte técnico", "agencia de software México", "páginas web México", "desarrollo web México",
   ],
   authors: [{ name: site.name }],
   alternates: { canonical: "/" },
@@ -48,7 +48,7 @@ const jsonLd = {
   url: site.url,
   telephone: `+${site.whatsapp}`,
   areaServed: "MX",
-  address: { "@type": "PostalAddress", addressLocality: "Cuautitlán", addressRegion: "Estado de México", addressCountry: "MX" },
+  address: { "@type": "PostalAddress", addressCountry: "MX" },
   sameAs: [site.social.facebook, site.social.instagram].filter(Boolean),
 };
 

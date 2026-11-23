@@ -27,7 +27,7 @@ const items: Item[] = [
       { label: "Visita + diagnóstico", value: "$350" },
       { label: "Servicio completo", value: "$500" },
     ],
-    note: "50% de anticipo y 50% al terminar. En zona cercana pagas todo al terminar. Cuautitlán y zona del Tren Suburbano.",
+    note: "50% de anticipo y 50% al terminar. Pregunta por la cobertura en tu zona.",
     cta: { label: "Agendar visita", href: waLink("Hola Flympux LAB, quiero agendar soporte técnico a domicilio."), external: true },
   },
   {
@@ -38,7 +38,7 @@ const items: Item[] = [
     img: "/img/workspace.webp",
     points: ["Más reseñas en Google", "Menú digital para restaurantes", "WhatsApp y redes en un toque", "Programada para tu negocio"],
     prices: [{ label: "Pago único", value: "$450" }],
-    note: "Ideal para restaurantes, barberías, talleres y más. Entrega en Cuautitlán y zona del Tren Suburbano.",
+    note: "Ideal para restaurantes, barberías, talleres y más. Envíos a todo México.",
     cta: { label: "Pedir mi tarjeta", href: waLink("Hola Flympux LAB, me interesa una tarjeta NFC para mi negocio."), external: true },
   },
   {

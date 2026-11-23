@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const secciones = [
-  ["Responsable", `${site.legalName}, con domicilio en ${site.location}, es responsable del tratamiento de los datos personales que nos proporcionas, conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.`],
+  ["Responsable", `${site.legalName}, con operación en México, es responsable del tratamiento de los datos personales que nos proporcionas, conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.`],
   ["Datos que recabamos", "Nombre, empresa, correo electrónico, teléfono y la información que compartes sobre tu proyecto a través del formulario de contacto, WhatsApp u otros medios."],
   ["Finalidades", "Usamos tus datos para responder tus solicitudes, elaborar cotizaciones, dar seguimiento a los servicios contratados y comunicarnos contigo. No vendemos ni rentamos tu información."],
   ["Transferencias", "Tus datos no se comparten con terceros, salvo con proveedores tecnológicos necesarios para operar nuestros servicios (por ejemplo, mensajería o correo) o cuando lo requiera una autoridad competente."],
