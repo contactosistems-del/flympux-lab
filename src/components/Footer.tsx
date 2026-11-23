@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { SocialButtons } from "./Social";
 import { nav, site, waLink } from "@/lib/site";
 
-const servicios = ["Software a medida", "Páginas web empresariales", "Tiendas en línea", "Sistemas administrativos", "Automatización de procesos", "Aplicaciones web", "Mantenimiento y soporte"];
+const servicios = ["Software a medida", "Páginas web empresariales", "Tiendas en línea", "Sistemas administrativos", "Automatización de procesos", "Aplicaciones web", "Mantenimiento y soporte", "Soporte a domicilio", "Tarjetas NFC", "Cámaras de seguridad", "Fotografía profesional"];
 
 export function Footer() {
   return (
