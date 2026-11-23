@@ -68,6 +68,16 @@ body::before {
 @keyframes beam { 0% { transform: translateX(-120%) } 100% { transform: translateX(220%) } }
 @keyframes pulse-dot { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
 @keyframes bar { from { transform: scaleY(.35) } to { transform: scaleY(1) } }
+@keyframes spin-rev { to { transform: rotate(-360deg) } }
+@keyframes glow { 0%,100% { opacity: .55; transform: scale(.95) } 50% { opacity: 1; transform: scale(1.05) } }
+@keyframes shine { 0% { transform: translateX(0) skewX(-12deg) } 55%,100% { transform: translateX(480%) skewX(-12deg) } }
+@keyframes shadow { 0%,100% { transform: translateX(-50%) scaleX(1); opacity: .9 } 50% { transform: translateX(-50%) scaleX(.82); opacity: .5 } }
+.animate-spin-rev { animation: spin-rev 60s linear infinite; }
+.animate-spin-orbit { animation: spin-slow 9s linear infinite; }
+.animate-spin-orbit-rev { animation: spin-rev 12s linear infinite; }
+.animate-glow { animation: glow 5s ease-in-out infinite; }
+.animate-shine { animation: shine 4.5s ease-in-out infinite; }
+.animate-shadow { animation: shadow 7s ease-in-out infinite; }
 .animate-floaty { animation: floaty 7s ease-in-out infinite; }
 .animate-spin-slow { animation: spin-slow 40s linear infinite; }
 .animate-beam { animation: beam 3.2s ease-in-out infinite; }
