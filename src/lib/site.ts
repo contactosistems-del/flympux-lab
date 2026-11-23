@@ -48,6 +48,7 @@ export const waLink = (text: string = site.whatsappMessage) =>
 export const nav = [
   { href: "/#servicios", label: "Servicios" },
   { href: "/#domicilio", label: "A domicilio" },
+  { href: "/#tarjetas-nfc", label: "NFC" },
   { href: "/#proyectos", label: "Proyectos" },
   { href: "/#nosotros", label: "Nosotros" },
   { href: "/galeria/", label: "Galería" },

@@ -39,7 +39,7 @@ const items: Item[] = [
     points: ["Más reseñas en Google", "Menú digital para restaurantes", "WhatsApp y redes en un toque", "Programada para tu negocio"],
     prices: [{ label: "Pago único", value: "$450" }],
     note: "Ideal para restaurantes, barberías, talleres y más. Envíos a todo México.",
-    cta: { label: "Pedir mi tarjeta", href: waLink("Hola Flympux LAB, me interesa una tarjeta NFC para mi negocio."), external: true },
+    cta: { label: "Ver cómo funciona", href: "/#tarjetas-nfc" },
   },
   {
     id: "camaras",
