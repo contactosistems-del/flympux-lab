@@ -1,0 +1,68 @@
+{
+  "_instrucciones": "Para agregar una imagen: súbela a la carpeta /galeria (o usa una ruta existente) y agrega un objeto a 'items'. Categorías válidas: Páginas web, Sistemas, Aplicaciones, Proyectos digitales. Usa 'etiqueta' para una leyenda propia o 'ilustrativa': true para fotos de stock.",
+  "items": [
+    {
+      "src": "/proyectos/jfx-seguridad-d.webp",
+      "titulo": "JFX Seguridad y Protección",
+      "categoria": "Páginas web",
+      "descripcion": "Sitio comercial de cámaras IP/WiFi y CCTV."
+    },
+    {
+      "src": "/proyectos/tacos-esmeralda-m.webp",
+      "titulo": "Tacos Esmeralda en celular",
+      "categoria": "Páginas web",
+      "descripcion": "Versión móvil del sitio de taquizas."
+    },
+    {
+      "src": "/proyectos/muestra-mx-d.webp",
+      "titulo": "MUESTRA.MX",
+      "categoria": "Aplicaciones",
+      "descripcion": "Portal de encuestas y opinión pública con panel administrativo."
+    },
+    {
+      "src": "/galeria/server-room.webp",
+      "titulo": "Infraestructura en la nube",
+      "categoria": "Proyectos digitales",
+      "descripcion": "Fotografía ilustrativa.",
+      "ilustrativa": true
+    },
+    {
+      "src": "/proyectos/nails-glez-d.webp",
+      "titulo": "Nails Glez",
+      "categoria": "Páginas web",
+      "descripcion": "Sitio para estudio de uñas y alaciados."
+    },
+    {
+      "src": "/proyectos/muestra-mx-m.webp",
+      "titulo": "MUESTRA.MX en celular",
+      "categoria": "Aplicaciones",
+      "descripcion": "Experiencia móvil del portal."
+    },
+    {
+      "src": "/proyectos/tacos-esmeralda-d.webp",
+      "titulo": "Tacos Esmeralda",
+      "categoria": "Páginas web",
+      "descripcion": "Taquizas a domicilio con cotizador de eventos."
+    },
+    {
+      "src": "/galeria/team-coding.webp",
+      "titulo": "Desarrollo en equipo",
+      "categoria": "Proyectos digitales",
+      "descripcion": "Fotografía ilustrativa.",
+      "ilustrativa": true
+    },
+    {
+      "src": "/proyectos/nails-glez-m.webp",
+      "titulo": "Nails Glez en celular",
+      "categoria": "Páginas web",
+      "descripcion": "Versión móvil con agenda de citas."
+    },
+    {
+      "src": "/galeria/hdd-install.webp",
+      "titulo": "Mantenimiento de equipos",
+      "categoria": "Proyectos digitales",
+      "descripcion": "Fotografía ilustrativa.",
+      "ilustrativa": true
+    }
+  ]
+}
