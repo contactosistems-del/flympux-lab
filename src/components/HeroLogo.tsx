@@ -62,14 +62,8 @@ export function HeroLogo() {
             alt="Flympux LAB"
             width={1000}
             height={1000}
-            className="relative w-full drop-shadow-[0_0_40px_rgb(124_255_61/.25)]"
+            className="relative w-full"
           />
-          {/* Destello metálico recortado a la forma del logo */}
-          <div
-            className="pointer-events-none absolute inset-0 overflow-hidden mix-blend-overlay [mask-image:url(/img/flx-logo-hero.webp)] [mask-size:100%_100%] [-webkit-mask-image:url(/img/flx-logo-hero.webp)] [-webkit-mask-size:100%_100%]"
-          >
-            <span className="absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/90 to-transparent animate-shine" />
-          </div>
         </div>
       </div>
 
