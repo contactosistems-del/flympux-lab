@@ -58,6 +58,17 @@ const proyectos: Proyecto[] = [
     urlLabel: "Ver en Instagram",
     dominio: "nails-glez",
   },
+  {
+    nombre: "EduWork",
+    tipo: "Plataforma web de capacitación",
+    descripcion: "Plataforma de cursos para estudiantes: registro, catálogo, lecciones con presentaciones animadas y material descargable, evaluaciones, progreso, constancias con folio verificable y panel administrativo.",
+    tags: ["Plataforma de cursos", "Panel admin", "Constancias"],
+    desktop: "/proyectos/eduwork-d.webp",
+    mobile: "/proyectos/eduwork-m.webp",
+    url: "https://eduwork-gamma.vercel.app",
+    urlLabel: "Ver demo",
+    dominio: "eduwork-gamma.vercel.app",
+  },
 ];
 
 function Showcase({ p, big }: { p: Proyecto; big?: boolean }) {
@@ -88,16 +99,16 @@ export function Projects() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader kicker="Proyectos" title={<>Proyectos que ya están trabajando</>} text="Sitios y portales que diseñamos y desarrollamos para negocios reales." />
         <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {proyectos.map((p, i) => (
-            <Reveal key={p.nombre} className={i === 0 ? "md:col-span-2 lg:col-span-3" : ""}>
-              <article onMouseMove={trackSpot} className={`spot group h-full overflow-hidden rounded-3xl border border-line bg-white/[0.02] transition duration-500 hover:border-electric/40 ${i === 0 ? "lg:grid lg:grid-cols-[1.35fr_1fr] lg:items-center" : "flex flex-col"}`}>
+          {proyectos.map((p, i) => { const big = i === 0 || (i === proyectos.length - 1 && (proyectos.length - 1) % 3 === 1); return (
+            <Reveal key={p.nombre} className={big ? "md:col-span-2 lg:col-span-3" : ""}>
+              <article onMouseMove={trackSpot} className={`spot group h-full overflow-hidden rounded-3xl border border-line bg-white/[0.02] transition duration-500 hover:border-electric/40 ${big ? "lg:grid lg:grid-cols-[1.35fr_1fr] lg:items-center" : "flex flex-col"}`}>
                 <div className="relative overflow-hidden bg-[radial-gradient(ellipse_at_30%_0%,rgb(255_255_255/.07),transparent_60%)]">
                   <div className="absolute inset-0 grid-bg opacity-50 [mask-image:linear-gradient(#000,transparent)]" aria-hidden />
-                  <Showcase p={p} big={i === 0} />
+                  <Showcase p={p} big={big} />
                 </div>
-                <div className={`flex flex-1 flex-col p-7 ${i === 0 ? "sm:p-10" : ""}`}>
+                <div className={`flex flex-1 flex-col p-7 ${big ? "sm:p-10" : ""}`}>
                   <p className="text-sm font-semibold text-electric">{p.tipo}</p>
-                  <h3 className={`mt-2 font-display font-semibold tracking-tight text-white ${i === 0 ? "text-3xl" : "text-2xl"}`}>{p.nombre}</h3>
+                  <h3 className={`mt-2 font-display font-semibold tracking-tight text-white ${big ? "text-3xl" : "text-2xl"}`}>{p.nombre}</h3>
                   <p className="mt-3 leading-relaxed text-muted">{p.descripcion}</p>
                   <ul className="mt-5 flex flex-wrap gap-2">
                     {p.tags.map((t) => <li key={t} className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-medium text-white/70">{t}</li>)}
@@ -120,7 +131,7 @@ export function Projects() {
                 </div>
               </article>
             </Reveal>
-          ))}
+          ); })}
         </div>
         <Reveal className="mt-12 flex justify-center">
           <Button href="/galeria/" variant="ghost" icon="arrow">Ver galería completa</Button>
