@@ -65,9 +65,9 @@ const proyectos: Proyecto[] = [
     tags: ["Plataforma de cursos", "Panel admin", "Constancias"],
     desktop: "/proyectos/eduworkline-d.webp",
     mobile: "/proyectos/eduworkline-m.webp",
-    url: "https://eduwork-gamma.vercel.app",
+    url: "https://eduworkline.vercel.app",
     urlLabel: "Ver demo",
-    dominio: "eduwork-gamma.vercel.app",
+    dominio: "eduworkline.vercel.app",
   },
 ];
 
