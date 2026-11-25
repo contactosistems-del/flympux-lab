@@ -59,6 +59,17 @@ const proyectos: Proyecto[] = [
     dominio: "nails-glez",
   },
   {
+    nombre: "Athiri",
+    tipo: "Catálogo digital e impreso",
+    descripcion: "Cabina cosmetológica: catálogo de servicios para celular con precios, rituales, políticas y agenda por WhatsApp, Messenger y Facebook, más versión impresa con QR para recepción.",
+    tags: ["Catálogo web", "QR", "Versión impresa"],
+    desktop: "/proyectos/athiri-d.webp",
+    mobile: "/proyectos/athiri-m.webp",
+    url: "https://athiri.vercel.app",
+    urlLabel: "Ver catálogo",
+    dominio: "athiri.vercel.app",
+  },
+  {
     nombre: "EduWorkLine",
     tipo: "Plataforma web de capacitación",
     descripcion: "Plataforma de cursos para estudiantes: registro, catálogo, lecciones con presentaciones animadas y material descargable, evaluaciones, progreso, constancias con folio verificable y panel administrativo.",
