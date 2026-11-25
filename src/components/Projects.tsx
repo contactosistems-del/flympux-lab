@@ -59,9 +59,9 @@ const proyectos: Proyecto[] = [
     dominio: "nails-glez",
   },
   {
-    nombre: "Athiri",
+    nombre: "Élite Spa",
     tipo: "Catálogo digital e impreso",
-    descripcion: "Cabina cosmetológica: catálogo de servicios para celular con precios, rituales, políticas y agenda por WhatsApp, Messenger y Facebook, más versión impresa con QR para recepción.",
+    descripcion: "Cabina cosmetológica: identidad con su logo y detalles lavanda, catálogo de servicios para celular con precios, rituales, políticas y agenda por WhatsApp, Messenger y Facebook, más versión impresa con QR para recepción.",
     tags: ["Catálogo web", "QR", "Versión impresa"],
     desktop: "/proyectos/athiri-d.webp",
     mobile: "/proyectos/athiri-m.webp",
